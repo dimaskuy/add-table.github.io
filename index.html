@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD SISWA TABLE</title>
+  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+
+  <body>
+
+    <!-- <div class="container srch-room mt-4">
+      <div class="row">
+        <div class="col my-auto">
+          <h3 class="text-left title-control title-search mr-3 d-inline-block">Cari Index Data</h3>
+          <div class="input-container search-box d-inline-block">
+            <form class="form-inline">
+              <div class="form-group">
+                <input type="number" class="form-control" id="inputData">
+              </div>
+                <button type="button" name="button" class="btn btn-primary ml-3 py-1 shadow-sm rounded-0" data-toggle="tooltip" data-html="true" title="Cari" data-placement="bottom" id="search"><i class="bi bi-search" style="font-size: 18px"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+  <div class="container">
+    <div class="container-title">
+      <h1 class="text-center title m-4" style="font-weight: bold; color: #5C33F6;">ADD SISWA!</h1>
+    </div>
+
+      <h4 class="text-left my-auto title-palette mr-2 d-inline-block"><i class="bi bi-palette-fill"></i> </h4>
+      <input type="color" name="" value="" class="d-inline" id="change-color">
+
+    <!-- table-responsive -->
+    <table class="table shadow-sm rounded-lg mt-3 col-sm table-responsive-sm">
+      <thead class="thead">
+        <tr>
+          <th scope="col">Siswa</th>
+          <th scope="col">Kelas</th>
+          <th scope="col">Foto Siswa</th>
+          <th scope="col">Action </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="example">
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td><button type="button" class="disabled btn btn-danger"><i class="bi bi-trash"></i> </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+    <button type="button" name="button" id="show_ctrl" class="btn btn-primary px-2 m-4 py-0 shadow-sm rounded-0"><i class="bi bi-person-plus-fill" style="font-size:24px;"></i> <span class="title-showCtrl ml-2 mb-2">Tambah Siswa</span> </button>
+  </div>
+
+  <div class="blur none animasiBlurCtrl">
+    <div class="container animasiCtrl ctrl-room mb-3 p-4 border shadow-lg overflow-hidden" style="margin-top:60px;">
+      <i class="bi bi-person-fill ctrl-icon"></i>
+
+      <button type="button" name="button" id="close_ctrl" class="m-2" data-toggle="tooltip" data-html="true" title="Close" data-placement="right"><i class="bi bi-x-lg"></i></button>
+      <div class="row">
+        <div class="col-sm my-auto">
+          <h3 class="text-left title-control">Control Room</h3>
+          <p class="desc">Silahkan isi formulir ini untuk menambah data siswa. Klik tombol tambah ("<code>+</code>") atau tekan keyboard <code>enter</code> untuk mengirim.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm input-container mt-3">
+          <form id="ctrl-form" action="index.html" method="post">
+            <div class="form-group">
+              <label for="inputNama">Nama</label>
+              <input type="text" class="form-control" id="inputNama" data-toggle="tooltip" title="Nama Siswa" autofocus>
+            </div>
+            <div class="form-group">
+              <label for="inputKelas">Kelas</label>
+              <input type="text" class="form-control" id="inputKelas" data-toggle="tooltip" title="Kelas Siswa">
+            </div>
+            <div class="form-group">
+              <label for="inputFoto">Foto Profile</label>
+              <input type="url" class="form-control" id="inputFoto" data-toggle="tooltip" title="Foto Profil Siswa">
+            </div>
+              <button type="submit" name="button" class="btn btn-primary mr-2 mt-1 px-2 py-0 shadow-sm rounded-0" data-toggle="tooltip" data-html="true" title="Tambah" data-placement="left" id="submit"><i class="bi bi-plus" style="font-size: 24px"></i></button>
+
+              <button type="reset" name="button" class="btn btn-primary btn-reset mt-1 px-2 py-0 shadow-sm rounded-0" data-toggle="tooltip" data-html="true" title="Clear Control Room Form" data-placement="right"><i class="bi bi-arrow-clockwise" style="font-size: 24px"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- MY SCRIPT -->
+    <script src="script.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+      })
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
